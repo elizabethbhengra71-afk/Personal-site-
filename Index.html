@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth's Personal Site</title>
+    <style>
+        /* --- GLOBAL STYLES & GRUNGE BACKGROUND --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth; /* Smooth scrolling for navbar links */
+        }
 
+        body {
+            /* Hacker/Tech Font */
+            font-family: 'Courier New', Courier, monospace; 
+            color: #ffffff;
+            line-height: 1.6;
+            background-color: #0a0a0a;
+            
+            /* THIS CREATES THE GRUNGY TEXTURE FROM IMAGE 2 (NO PHOTOS NEEDED) */
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(50, 50, 50, 0.5), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(30, 30, 30, 0.8), transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px),
+                linear-gradient(to bottom, #1a1a1a, #050505);
+            background-attachment: fixed;
+        }
+
+        /* --- NAVIGATION BAR (Like AmateurWeb) --- */
+        nav {
+            background-color: rgba(0, 0, 0, 0.95); /* Almost solid black */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #222;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #ff3333; /* Red accent */
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff3333; /* Red on hover */
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: #ff3333; /* Red text for your name */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #ff3333;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        section {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-bottom: 1px dashed #333;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-left: 4px solid #ff3333; /* Red line on the left */
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            color: #cccccc;
+            background: rgba(0, 0, 0, 0.6); /* Slight dark box behind text for readability */
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #000;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+        
+        footer span {
+            color: #ff3333;
+        }
+
+        /* Responsive Design for Phones */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <a href="#" class="logo">Elizabeth's Site</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#profile">Profile</a>
+            <a href="#interested">Interested</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Welcome) -->
+    <header class="hero">
+        <h1>Hello, I'm <span>Elizabeth!</span></h1>
+        <p>Welcome to my very first website!</p>
+        <a href="#about" class="btn">Learn more</a>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About</h2>
+        <p class="section-text">
+            This is my first website. I built it entirely from scratch using HTML and CSS. I am excited to learn more about web development and create even cooler projects in the future.
+        </p>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile">
+        <h2>Profile</h2>
+        <p class="section-text">
+            I'm Elizabeth 🙂<br><br>
+            I'm currently pursuing my higher education. I'm 17 years old, and I live in India.
+        </p>
+    </section>
+
+    <!-- INTERESTED SECTION -->
+    <section id="interested">
+        <h2>Interested</h2>
+        <p class="section-text">
+            I love traveling, eating food, and hanging out with my friends. Exploring new places and trying different cuisines is my favorite way to spend my free time.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 The amateur tech girl; built with <span>HTML</span> and <span>CSS</span>
+    </footer>
+
+</body>
+  </html>
